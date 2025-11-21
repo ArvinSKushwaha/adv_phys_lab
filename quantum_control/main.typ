@@ -7,7 +7,7 @@
 #import "@preview/physica:0.9.3": *
 #import "@preview/unify:0.7.1": *
 
-#let document_title = [Quantum Control using Nuclear Magnetic Resonace]
+#let document_title = [Measuring Spin Echo Responses in Nuclear Magnetic Resonance]
 #let short_document_title = "Quantum Control"
 #let student = "Arvin Kushwaha, Kishore Palaniswami"
 #let professor = "Prof. Dr. Philipp Rosenzweig"
@@ -58,6 +58,12 @@
   numbering: dependent-numbering("1.1", levels: 1),
 )
 
+#outline()
+
+#pagebreak()
+
+#set page(columns: 2)
+
 #show: body => {
   for elem in body.children {
     if elem.func() == math.equation and elem.block {
@@ -70,11 +76,17 @@
   }
 }
 
-#outline()
-
-#pagebreak()
-
 = Introduction
+
+Nuclear Magnetic Resonance (NMR) is a broadly utilized tool for determining the structure, density, and chemical environment of atomic nuclei, amongst other quantities and characteristics.
+
+For NMR to work, the atomic nuclei must carry a non-zero magnetic dipole moment so it may couple to the external magnetic field. For #ce("@H,1,@"), we have a spin of $1/2$. With our gyromagnetic ratio $gamma$, we have our magnetic dipole moment:
+
+$
+  vc(mu) = gamma vc(S)
+. $ <eq:dipole_moment_spin>
+
+The state of our spin $1/2$ nucleus is represented by a spinor $(alpha, beta)$, where $alpha, beta in CC$ and $norm(alpha)^2 + norm(beta)^2 = 1$. Our spin vector $vc(S)$ is a vector of 3 operators: $S_(x), S_(y), S_(z)$, where $S_(i) = hbar/2 sigma_(i)$ and $sigma_(i)$ are the Pauli matrices. Because of the quantization of our spin, our magnetic dipole moments are also quantized. Since our spin can be measured to be either $(hbar)/(2)$ or $-(hbar)/(2)$, our magnetic dipole moment is either $(gamma hbar)/(2)$ or $-(gamma hbar)/(2)$ (along our axis of measurement).
 
 = Methods
 

@@ -1,7 +1,6 @@
 #import "@preview/catppuccin:1.0.0": flavors
 #import "@preview/whalogen:0.3.0": ce
-#import "@preview/cetz:0.4.2"
-#import "@preview/cetz-plot:0.1.3"
+#import "@preview/cetz:0.3.1"
 #import "@preview/suiji:0.3.0": *
 #import "@preview/great-theorems:0.1.1": *
 #import "@preview/headcount:0.1.0": *
@@ -41,9 +40,6 @@
 #set par(justify: true, spacing: 1em, first-line-indent: 1em)
 #show heading: set block(above: 1.4em, below: 1em)
 
-#let raw_spin_echo_data = read("./data/SpinEchoResponse.02.dat").split("\n").slice(2, none).join("\n")
-#let spin_echo_data = csv(bytes(raw_spin_echo_data), delimiter: "\t")
-
 #align(center)[
   #v(10em)
   #title([#text(size: 14pt, weight: "regular")[#document_title]]) \
@@ -82,33 +78,19 @@
 
 = Introduction
 
-Nuclear Magnetic Resonance (NMR) is a broadly utilized tool for determining the
-structure, density, and chemical environment of atomic nuclei, amongst other
-quantities and characteristics.
+Nuclear Magnetic Resonance (NMR) is a broadly utilized tool for determining the structure, density, and chemical environment of atomic nuclei, amongst other quantities and characteristics.
 
-For NMR to work, the atomic nuclei must carry a non-zero magnetic dipole moment
-so it may couple to the external magnetic field. For #ce("@H,1,@"), we have a
-spin of $1/2$. With our gyromagnetic ratio $gamma$, we have our magnetic dipole
-moment:
+For NMR to work, the atomic nuclei must carry a non-zero magnetic dipole moment so it may couple to the external magnetic field. For #ce("@H,1,@"), we have a spin of $1/2$. With our gyromagnetic ratio $gamma$, we have our magnetic dipole moment:
 
 $
   vc(mu) = gamma vc(S)
 . $ <eq:dipole_moment_spin>
 
-The state of our spin $1/2$ nucleus is represented by a spinor $(alpha, beta)$,
-where $alpha, beta in CC$ and $norm(alpha)^2 + norm(beta)^2 = 1$. Our spin
-vector $vc(S)$ is a vector of 3 operators: $S_(x), S_(y), S_(z)$, where $S_(i)
-= hbar/2 sigma_(i)$ and $sigma_(i)$ are the Pauli matrices. Because of the
-quantization of our spin, our magnetic dipole moments are also quantized. Since
-our spin can be measured to be either $(hbar)/(2)$ or $-(hbar)/(2)$, our
-magnetic dipole moment is either $(gamma hbar)/(2)$ or $-(gamma hbar)/(2)$
-(along our axis of measurement).
+The state of our spin $1/2$ nucleus is represented by a spinor $(alpha, beta)$, where $alpha, beta in CC$ and $norm(alpha)^2 + norm(beta)^2 = 1$. Our spin vector $vc(S)$ is a vector of 3 operators: $S_(x), S_(y), S_(z)$, where $S_(i) = hbar/2 sigma_(i)$ and $sigma_(i)$ are the Pauli matrices. Because of the quantization of our spin, our magnetic dipole moments are also quantized. Since our spin can be measured to be either $(hbar)/(2)$ or $-(hbar)/(2)$, our magnetic dipole moment is either $(gamma hbar)/(2)$ or $-(gamma hbar)/(2)$ (along our axis of measurement).
 
 = Methods
 
 = Results
-
-
 
 = Discussion
 

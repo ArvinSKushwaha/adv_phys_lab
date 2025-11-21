@@ -94,4 +94,4 @@ The state of our spin $1/2$ nucleus is represented by a spinor $(alpha, beta)$, 
 
 = Discussion
 
-= Acknowledegments
+= Acknowledgements

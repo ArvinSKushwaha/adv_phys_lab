@@ -1,0 +1,74 @@
+- Spectroscopic Frequency: 89.170 kHz
+- Holdoff: 6 s
+- Trig Mode: Auto
+- P > Delta Freq: 0
+- P > Ncyc: 38
+- P > Amp: 10 V
+- Tau: 200 ms
+- I > Delta Freq: 0
+- I > Ncyc: 20
+- I > Amp: 5.000 V
+- B > Current: 1.1220 A
+
+Ch1: Pilot Signal
+Ch2: Signal Out
+Ext (Trigger): Trigger Out	
+
+> Saved ./data/PrecessionDecayResponse.01.dat
+> Saved ./data/PTriggerPulse.01.dat
+
+Enable Mixer
+Update I > Ncyc: 77
+Update B > Current: 1.1170 A
+
+> Set Ch1: Mixer Out
+
+> Saved ./data/PTriggerPulse.02.dat
+> Saved ./data/SpinEchoResponse.02.dat
+
+Update I > Amp: 10.000 V
+Update B > Current: 1.1172 A
+
+> Recording Tau Data
+
+Update Tau: 100 ms - 1000 ms (100 ms increments)
+
+> Saved ./data/tau/100ms/
+> Saved ./data/tau/200ms/
+> Saved ./data/tau/300ms/
+> Saved ./data/tau/400ms/
+> Saved ./data/tau/500ms/
+> Saved ./data/tau/600ms/
+> Saved ./data/tau/700ms/
+> Saved ./data/tau/800ms/
+> Saved ./data/tau/900ms/
+> Saved ./data/tau/1000ms/
+
+Return Tau: 200 ms
+Update B > Current: {1.1152 A, 1.1162 A, 1.1172 A, 1.1182 A, 1.1192 A}
+
+> Saved ./data/B_current/1.1152A/
+> Saved ./data/B_current/1.1162A/
+> Saved ./data/B_current/1.1172A/
+> Saved ./data/B_current/1.1182A/
+> Saved ./data/B_current/1.1192A/
+
+Return B > Current: 1.1172 A
+Update I > Ncyc: {10, 50, 77, 100, 150, 200, 231, 250, 300, 350, 400, 450, 500}
+
+> Saved ./data/I_ncyc/10/
+> Saved ./data/I_ncyc/50/
+> Saved ./data/I_ncyc/77/
+> Saved ./data/I_ncyc/100/
+> Saved ./data/I_ncyc/150/
+> Saved ./data/I_ncyc/200/
+> Saved ./data/I_ncyc/231/
+> Saved ./data/I_ncyc/250/
+> Saved ./data/I_ncyc/350/
+> Saved ./data/I_ncyc/400/
+> Saved ./data/I_ncyc/450/
+> Saved ./data/I_ncyc/500/
+
+Removed Metal Topping
+
+> Saved ./data/no_metal_corrector/
